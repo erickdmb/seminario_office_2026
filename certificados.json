@@ -2,21 +2,21 @@
   {
     "dni": "12345678",
     "nombre": "Juan Pérez Gómez",
-    "evento": "Seminario Tecnológico de 3 Días",
-    "horas": "30 horas académicas",
+    "evento": "Seminario de Office Avanzado",
+    "horas": "120 horas académicas",
     "estado": "Válido"
   },
   {
     "dni": "87654321",
     "nombre": "María Rodríguez Ruiz",
-    "evento": "Seminario Tecnológico de 3 Días",
-    "horas": "30 horas académicas",
+    "evento": "Seminario de Office Avanzado",
+    "horas": "120 horas académicas",
     "estado": "Válido"
   },
   {
     "dni": "43250320",
     "nombre": "Erick Moscoso Bravo",
-    "evento": "Seminario Tecnológico de 3 Días",
+    "evento": "Seminario de Office Avanzado",
     "horas": "120 horas académicas",
     "estado": "Válido"
   }
