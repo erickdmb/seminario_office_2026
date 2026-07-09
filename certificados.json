@@ -12,5 +12,12 @@
     "evento": "Seminario Tecnológico de 3 Días",
     "horas": "30 horas académicas",
     "estado": "Válido"
+  },
+  {
+    "dni": "43250320",
+    "nombre": "Erick Moscoso Bravo",
+    "evento": "Seminario Tecnológico de 3 Días",
+    "horas": "120 horas académicas",
+    "estado": "Válido"
   }
 ]
