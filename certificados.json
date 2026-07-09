@@ -19,5 +19,12 @@
     "evento": "Seminario de Office Avanzado",
     "horas": "120 horas académicas",
     "estado": "Válido"
+  },
+  {
+    "dni": "19861993",
+    "nombre": "María Mgdalena Gómez Galindo",
+    "evento": "Seminario de Office Avanzado",
+    "horas": "120 horas académicas",
+    "estado": "Válido"
   }
 ]
