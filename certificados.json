@@ -1,30 +1,18 @@
 [
   {
     "dni": "12345678",
-    "nombre": "Juan Pérez Gómez",
-    "evento": "Seminario de Office Avanzado",
-    "horas": "120 horas académicas",
-    "estado": "Válido"
-  },
-  {
-    "dni": "87654321",
-    "nombre": "María Rodríguez Ruiz",
-    "evento": "Seminario de Office Avanzado",
-    "horas": "120 horas académicas",
-    "estado": "Válido"
+    "nombre": "Juan Pérez Gómez"
   },
   {
     "dni": "43250320",
-    "nombre": "Erick Moscoso Bravo",
-    "evento": "Seminario de Office Avanzado",
-    "horas": "120 horas académicas",
-    "estado": "Válido"
+    "nombre": "Erick Moscoso Bravo"
+  },
+  {
+    "dni": "87654321",
+    "nombre": "María Rodríguez Ruiz"
   },
   {
     "dni": "19861993",
-    "nombre": "María Mgdalena Gómez Galindo",
-    "evento": "Seminario de Office Avanzado",
-    "horas": "120 horas académicas",
-    "estado": "Válido"
+    "nombre": "María Magdalena Gómez Galindo"
   }
 ]

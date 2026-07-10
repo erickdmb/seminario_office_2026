@@ -14,8 +14,9 @@
 </head>
 <body class="bg-slate-50 min-h-screen flex flex-col justify-between text-slate-800 relative">
 
-    <div class="fixed inset-0 pointer-events-none flex items-center justify-center z-0 opacity-[0.05]"
-    style="background-image: url('logo_dpw.png'); background-repeat: no-repeat; background-position: center; background-size: 40%; background-attachment: fixed;">
+    <!-- Fondo con logo institucional como marca de agua -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-[0.06]" aria-hidden="true">
+        <img src="logo_dpw.png" alt="" class="absolute inset-0 w-full h-full object-contain object-center" style="max-width: 600px; max-height: 600px; margin: auto; top: 0; bottom: 0; left: 0; right: 0;">
     </div>
 
     <header class="bg-slate-900 text-white shadow-md relative z-10">
@@ -40,29 +41,41 @@
 
     <main class="relative z-10 flex-grow max-w-2xl w-full mx-auto px-4 py-12 flex flex-col justify-center">
         
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8 mb-8 transition-all hover:shadow-2xl">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8 mb-6 transition-all hover:shadow-2xl">
             <div class="mb-6 text-center">
-                <h2 class="text-2xl font-bold text-slate-900 mb-2">Verificar Asistencia al Seminario</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Verificar Certificado</h2>
                 <p class="text-slate-500 text-sm">
-                    Ingrese el número de <strong class="font-semibold text-slate-700">DNI</strong> del participante para validar su acreditación correspondiente a la participación en el <strong class="font-semibold text-slate-700">SEMINARIO DE OFFICE AVANZADO</strong>.
+                    Ingrese el número de <strong class="font-semibold text-slate-700">DNI</strong> del participante para validar su acreditación correspondiente al
+                    <strong class="font-semibold text-slate-700">Seminario de Office Avanzado</strong>.
                 </p>
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-3">
                 <div class="relative">
                     <label for="inputBusqueda" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 text-left">Número de Documento (DNI):</label>
                     <div class="relative rounded-lg shadow-sm">
-                        <input type="text" id="inputBusqueda" 
-                            class="block w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-200 focus:outline-none transition-all font-medium text-lg tracking-wide" 
-                            placeholder="Ej. 12345678"
+                        <input type="text" id="inputBusqueda"
+                            class="block w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-200 focus:outline-none transition-all font-medium text-lg tracking-wide"
+                            placeholder="Ej. 12345678" maxlength="8"
                             onkeypress="if(event.key === 'Enter') verificarCertificado()">
                     </div>
+                    <p id="mensajeError" class="hidden text-xs font-semibold text-rose-600 mt-1.5 flex items-center gap-1">
+                        <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+                        <span></span>
+                    </p>
                 </div>
 
-                <button onclick="verificarCertificado()" 
+                <button onclick="verificarCertificado()"
                     class="w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3.5 px-4 rounded-xl shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition-all flex items-center justify-center gap-2 text-base cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     Consultar Registro Oficial
                 </button>
+            </div>
+
+            <!-- Info del padrón -->
+            <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+                <span>Padrón oficial</span>
+                <span id="totalRegistros"></span>
             </div>
         </div>
 
@@ -73,19 +86,52 @@
 
     <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 font-medium relative z-10">
         <div class="max-w-4xl mx-auto px-4">
-            <p>© 2026 IDEX SAM - PE Diseño y Programación Web</p>
+            <p>© 2026 IDEX SAM | PE Diseño y Programación Web</p>
             <p class="mt-1 text-slate-400 text-[10px]">Todos los derechos reservados</p>
         </div>
     </footer>
 
     <script>
+        let certificadosCache = null;
+
+        // Cargar padrón al inicio para mostrar total de registros
+        async function cargarPadron() {
+            try {
+                const respuesta = await fetch('certificados.json');
+                if (respuesta.ok) {
+                    certificadosCache = await respuesta.json();
+                    const total = certificadosCache.length;
+                    document.getElementById('totalRegistros').textContent =
+                        `${total} ${total === 1 ? 'registro certificado' : 'registros certificados'}`;
+                }
+            } catch (_) { /* silencio: se carga en consulta */ }
+        }
+
+        function mostrarError(mensaje) {
+            const el = document.getElementById('mensajeError');
+            el.querySelector('span').textContent = mensaje;
+            el.classList.remove('hidden');
+        }
+
+        function limpiarError() {
+            document.getElementById('mensajeError').classList.add('hidden');
+        }
+
         async function verificarCertificado() {
             const input = document.getElementById('inputBusqueda');
             const query = input.value.trim();
             const contenedor = document.getElementById('contenedorResultado');
-            
+
+            limpiarError();
+
             if (!query) {
-                alert('Por favor, ingrese un número de DNI válido.');
+                mostrarError('Ingrese el número de DNI del participante.');
+                input.focus();
+                return;
+            }
+
+            if (!/^\d{8}$/.test(query)) {
+                mostrarError('El DNI debe ser exactamente 8 dígitos numéricos.');
                 input.focus();
                 return;
             }
@@ -95,51 +141,186 @@
                 contenedor.innerHTML = `
                     <div class="flex justify-center items-center py-8">
                         <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-slate-900"></div>
-                        <span class="ml-3 text-sm font-medium text-slate-500">Buscando en el registro oficial...</span>
+                        <span class="ml-3 text-sm font-medium text-slate-500">Consultando registro oficial...</span>
                     </div>
                 `;
                 contenedor.style.opacity = '1';
                 contenedor.style.transform = 'scale(1)';
 
-                const respuesta = await fetch('certificados.json');
-                if (!respuesta.ok) {
-                    throw new Error('No se pudo acceder a la base de datos.');
+                // Usar cache si ya se cargó, si no hacer fetch
+                let baseDatos;
+                if (certificadosCache) {
+                    baseDatos = certificadosCache;
+                } else {
+                    const respuesta = await fetch('certificados.json');
+                    if (!respuesta.ok) throw new Error('No se pudo acceder al padrón.');
+                    certificadosCache = await respuesta.json();
+                    baseDatos = certificadosCache;
                 }
-                
-                const baseDatos = await respuesta.json();
+
+                // Retraso mínimo para que el usuario perciba el estado de carga
+                await new Promise(resolve => setTimeout(resolve, 400));
+
                 const alumno = baseDatos.find(item => String(item.dni).trim() === query);
 
                 if (alumno) {
                     contenedor.innerHTML = `
-                        <div class="bg-sky-50 border border-sky-200 rounded-2xl p-6 sm:p-8 shadow-md relative overflow-hidden">
-                            <div class="space-y-4 w-full">
-                                <div>
-                                    <span class="inline-block bg-sky-200 text-sky-800 text-xs px-2.5 py-1 rounded-full font-bold tracking-wide uppercase mb-2">
-                                        Certificado Auténtico Verificado
-                                    </span>
-                                    <h3 class="text-xl font-bold text-slate-950">${alumno.nombre}</h3>
-                                    <p class="text-sm text-slate-600 font-medium mt-0.5">DNI: ${alumno.dni}</p>
+                        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 sm:p-8 shadow-md">
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
                                 </div>
-                                
-                                <div class="border-t border-sky-200/60 pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                                <div class="space-y-4 w-full">
                                     <div>
-                                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Evento Académico</span>
-                                        <span class="font-semibold text-slate-800">${alumno.evento || 'Seminario de 3 Días'}</span>
-                                    </div>
-                                    <div>
-                                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Condición de Acreditación</span>
-                                        <span class="font-semibold text-slate-800">Participación Completa</span>
-                                    </div>
-                                    <div>
-                                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Carga Horaria Académica</span>
-                                        <span class="font-semibold text-slate-800">${alumno.horas || '30 Horas Lectivas'}</span>
-                                    </div>
-                                    <div>
-                                        <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Estado de Validación</span>
-                                        <span class="font-bold text-sky-600 uppercase tracking-wide flex items-center gap-1">
-                                            ● Vigente y Oficial
+                                        <span class="inline-block bg-emerald-200 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-bold tracking-wide uppercase mb-2">
+                                            Certificado Verificado ✓
                                         </span>
+                                        <h3 class="text-xl font-bold text-slate-950">${alumno.nombre}</h3>
+                                        <p class="text-sm text-slate-600 font-medium mt-0.5">DNI: ${alumno.dni}</p>
                                     </div>
+
+                                    <div class="border-t border-emerald-200/60 pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                                        <div>
+                                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Evento</span>
+                                            <span class="font-semibold text-slate-800">Seminario de Office Avanzado</span>
+                                        </div>
+                                        <div>
+                                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Carga Horaria</span>
+                                            <span class="font-semibold text-slate-800">120 Horas Académicas</span>
+                                        </div>
+                                        <div>
+                                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Condición</span>
+                                            <span class="font-semibold text-slate-800">Participación Completa</span>
+                                        </div>
+                                        <div>
+                                            <span class="block text-xs font-bold uppercase tracking-wider text-slate-400">Estado</span>
+                                            <span class="font-bold text-emerald-600 uppercase tracking-wide">
+                                                ● Vigente y Oficial
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Temario y Expositores -->
+                        <div class="mt-4 bg-white rounded-2xl shadow border border-slate-100 overflow-hidden">
+                            <div class="px-6 py-3 border-b border-slate-100">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                                    <svg class="w-3.5 h-3.5 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                    Temario y Expositores
+                                </h4>
+                            </div>
+                            <div class="px-5 pb-5 pt-4">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                        <div class="flex items-start gap-2.5">
+                                            <div class="flex-shrink-0 w-7 h-7 rounded-lg bg-sky-100 flex items-center justify-center mt-0.5">
+                                                <svg class="w-3.5 h-3.5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Excel</p>
+                                                <p class="text-xs font-semibold text-slate-800 leading-snug">Automatización y análisis de datos en Excel con IA</p>
+                                                <p class="text-[11px] text-slate-500 mt-0.5">Exp. Johann Rafael Meza Salazar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                        <div class="flex items-start gap-2.5">
+                                            <div class="flex-shrink-0 w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center mt-0.5">
+                                                <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8M5 19h14a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Office</p>
+                                                <p class="text-xs font-semibold text-slate-800 leading-snug">Outlook y OneNote: Gestión avanzada de información</p>
+                                                <p class="text-[11px] text-slate-500 mt-0.5">Exp. Mtro. Elvis Bastidas Huamán</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                        <div class="flex items-start gap-2.5">
+                                            <div class="flex-shrink-0 w-7 h-7 rounded-lg bg-violet-100 flex items-center justify-center mt-0.5">
+                                                <svg class="w-3.5 h-3.5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v12a4 4 0 0 1-4 4zm0 0h12a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 0 1 2.828 0l2.829 2.829a2 2 0 0 1 0 2.828l-8.486 8.485M7 17h.01"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">PowerPoint</p>
+                                                <p class="text-xs font-semibold text-slate-800 leading-snug">PowerPoint profesional con IA: Storytelling visual</p>
+                                                <p class="text-[11px] text-slate-500 mt-0.5">Exp. Luis Gustavo Kamel Gómez</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                        <div class="flex items-start gap-2.5">
+                                            <div class="flex-shrink-0 w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center mt-0.5">
+                                                <svg class="w-3.5 h-3.5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2zm0 0V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v10m-6 0a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2m0 0V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2h-2a2 2 0 0 1-2-2z"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Excel</p>
+                                                <p class="text-xs font-semibold text-slate-800 leading-snug">Excel para toma de decisiones: Herramientas de simulación</p>
+                                                <p class="text-[11px] text-slate-500 mt-0.5">Exp. Mtro. Hércules Hernán Huamán Paucar</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                        <div class="flex items-start gap-2.5">
+                                            <div class="flex-shrink-0 w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center mt-0.5">
+                                                <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19a2 2 0 0 1-2 2z"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Word</p>
+                                                <p class="text-xs font-semibold text-slate-800 leading-snug">Word avanzado: Automatización y documentos profesionales</p>
+                                                <p class="text-[11px] text-slate-500 mt-0.5">Exp. Mtro. Rolando Lazo Gálvez</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-slate-50 rounded-xl p-3 border border-slate-100">
+                                        <div class="flex items-start gap-2.5">
+                                            <div class="flex-shrink-0 w-7 h-7 rounded-lg bg-indigo-100 flex items-center justify-center mt-0.5">
+                                                <svg class="w-3.5 h-3.5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <p class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Office 365</p>
+                                                <p class="text-xs font-semibold text-slate-800 leading-snug">Integración avanzada en Office 365 Copilot</p>
+                                                <p class="text-[11px] text-slate-500 mt-0.5">Exp. Mtro. Kuking Ñahui Parillo</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400 font-semibold">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                                        </svg>
+                                        120 Horas Académicas
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14M5 18h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"/>
+                                        </svg>
+                                        Virtual — Google Meet y Facebook Live
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -147,29 +328,50 @@
                 } else {
                     contenedor.innerHTML = `
                         <div class="bg-rose-50 border border-rose-200 rounded-2xl p-6 shadow-md">
-                            <div>
-                                <span class="inline-block bg-rose-200 text-rose-800 text-xs px-2.5 py-1 rounded-full font-bold tracking-wide uppercase mb-2">
-                                    Error de Validación
-                                </span>
-                                <h3 class="text-lg font-bold text-slate-950 mb-1">Registro No Encontrado</h3>
-                                <p class="text-sm text-slate-600 leading-relaxed">
-                                    El número de DNI <span class="font-bold text-rose-700 font-mono bg-rose-100 px-1 rounded">${query}</span> no figura en el padrón oficial de alumnos certificados para este seminario.
-                                </p>
-                                <p class="text-xs text-slate-400 mt-3 italic">
-                                    Nota: Asegúrese de haber ingresado correctamente los 8 dígitos de su documento de identidad.
-                                </p>
+                            <div class="flex items-start gap-4">
+                                <div class="flex-shrink-0 mt-1">
+                                    <svg class="w-7 h-7 text-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="inline-block bg-rose-200 text-rose-800 text-xs px-2.5 py-1 rounded-full font-bold tracking-wide uppercase mb-2">
+                                        Registro No Encontrado
+                                    </span>
+                                    <h3 class="text-lg font-bold text-slate-950 mb-1">DNI no registrado</h3>
+                                    <p class="text-sm text-slate-600 leading-relaxed">
+                                        El número <span class="font-bold text-rose-700 font-mono bg-rose-100 px-1 rounded">${query}</span> no figura en el padrón oficial del Seminario de Office Avanzado.
+                                    </p>
+                                    <p class="text-xs text-slate-400 mt-3 italic">
+                                        Verifique que haya ingresado los 8 dígitos correctamente.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     `;
                 }
-            } catch (error) {
+            } catch (_) {
                 contenedor.innerHTML = `
-                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-sm text-amber-800">
-                        <p class="font-bold">Error de Acceso Local</p>
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 shadow-md">
+                        <div class="flex items-start gap-4">
+                            <svg class="w-6 h-6 text-amber-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                            </svg>
+                            <div>
+                                <p class="font-bold text-amber-800">No se pudo acceder al registro oficial</p>
+                                <p class="text-xs text-amber-700 mt-1">Intente nuevamente en unos segundos.</p>
+                            </div>
+                        </div>
                     </div>
                 `;
             }
         }
+
+        // Limpiar error al escribir
+        document.getElementById('inputBusqueda').addEventListener('input', limpiarError);
+
+        // Cargar padrón en segundo plano al cargar la página
+        cargarPadron();
     </script>
 </body>
 </html>
