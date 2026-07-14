@@ -1,18 +1,22 @@
 [
   {
     "dni": "12345678",
-    "nombre": "Juan Pérez Gómez"
+    "nombre": "Saniel Marquina Saenz",
+    "condicion": "Participante"
   },
   {
     "dni": "43250320",
-    "nombre": "Erick Moscoso Bravo"
+    "nombre": "Erick Moscoso Bravo",
+    "condicion": "Organizador"
   },
   {
     "dni": "87654321",
-    "nombre": "María Rodríguez Ruiz"
+    "nombre": "María Rodríguez Ruiz",
+    "condicion": "Ponente"
   },
   {
     "dni": "19861993",
-    "nombre": "María Magdalena Gómez Galindo"
+    "nombre": "María Magdalena Gómez Galindo",
+    "condicion": "Organizador"
   }
 ]
