@@ -2,56 +2,67 @@
   {
     "dni": "12345678",
     "nombre": "Saniel Marquina Saenz",
-    "condicion": "Asistente"
+    "condicion": "Asistente",
+    "codigo": "IDEXSAM-2026-DPW-S1-001"
   },
   {
     "dni": "43250320",
     "nombre": "Erick Donniex Moscoso Bravo",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-002"
   },
   {
     "dni": "87654321",
     "nombre": "María Rodríguez Ruiz",
-    "condicion": "Ponente"
+    "condicion": "Ponente",
+    "codigo": "IDEXSAM-2026-DPW-S1-003"
   },
   {
     "dni": "19861993",
     "nombre": "María Magdalena Gómez Galindo",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-004"
   },
     {
     "dni": "19943972",
     "nombre": "Nohemy Esther Carhuancho Hidalgo",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-005"
   },
   {
     "dni": "20694074",
     "nombre": "Moises Alvarez Huaman",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-006"
   },
   {
     "dni": "20642500",
     "nombre": "Juan Jesus Torres Valero",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-007"
   },
   {
     "dni": "19861998",
     "nombre": "Ruben Antonny Limache Ignacio",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-008"
   },
   {
     "dni": "40774287",
     "nombre": "Roberto Johnny Macetas Rodriguez",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-009"
   },
   {
     "dni": "19862000",
     "nombre": "Carlos Romero Loardo",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-010"
   },
   {
     "dni": "44961882",
     "nombre": "Yesenia Evelyn Mallma Navarro",
-    "condicion": "Organizador"
+    "condicion": "Organizador",
+    "codigo": "IDEXSAM-2026-DPW-S1-011"
   }
 ]
