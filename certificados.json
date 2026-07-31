@@ -1,68 +1,1256 @@
-[
-  {
-    "dni": "12345678",
-    "nombre": "Saniel Marquina Saenz",
-    "condicion": "Asistente",
-    "codigo": "IDEXSAM-2026-DPW-S1-001"
-  },
-  {
-    "dni": "43250320",
-    "nombre": "Erick Donniex Moscoso Bravo",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-002"
-  },
-  {
-    "dni": "87654321",
-    "nombre": "María Rodríguez Ruiz",
-    "condicion": "Ponente",
-    "codigo": "IDEXSAM-2026-DPW-S1-003"
-  },
-  {
-    "dni": "19861993",
-    "nombre": "María Magdalena Gómez Galindo",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-004"
-  },
+﻿[
     {
-    "dni": "19943972",
-    "nombre": "Nohemy Esther Carhuancho Hidalgo",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-005"
-  },
-  {
-    "dni": "20694074",
-    "nombre": "Moises Alvarez Huaman",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-006"
-  },
-  {
-    "dni": "20642500",
-    "nombre": "Juan Jesus Torres Valero",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-007"
-  },
-  {
-    "dni": "19861998",
-    "nombre": "Ruben Antonny Limache Ignacio",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-008"
-  },
-  {
-    "dni": "40774287",
-    "nombre": "Roberto Johnny Macetas Rodriguez",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-009"
-  },
-  {
-    "dni": "19862000",
-    "nombre": "Carlos Romero Loardo",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-010"
-  },
-  {
-    "dni": "44961882",
-    "nombre": "Yesenia Evelyn Mallma Navarro",
-    "condicion": "Organizador",
-    "codigo": "IDEXSAM-2026-DPW-S1-011"
-  }
+        "dni":  "81117138",
+        "nombre":  "ALARCON POMA, Fabricio Raúl",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-001"
+    },
+    {
+        "dni":  "60283275",
+        "nombre":  "AQUINO MACHA, Gysvel Jhandira",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-002"
+    },
+    {
+        "dni":  "75189061",
+        "nombre":  "BRAVO ALIAGA, Yosser",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-003"
+    },
+    {
+        "dni":  "74895767",
+        "nombre":  "CASTILLO LEON, Fiorela",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-004"
+    },
+    {
+        "dni":  "61060845",
+        "nombre":  "CCENTE PARIONA, Shany Alicia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-005"
+    },
+    {
+        "dni":  "73992191",
+        "nombre":  "QUISPE CUELLAR, Pedro Anibal",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-006"
+    },
+    {
+        "dni":  "61484810",
+        "nombre":  "EGOAVIL QUISPE, Dafne Yayza",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-007"
+    },
+    {
+        "dni":  "62059520",
+        "nombre":  "FLORES RICO, Eduardo Rudy",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-008"
+    },
+    {
+        "dni":  "61060818",
+        "nombre":  "GRANADOS ROSADO, Andhy Nicolahy",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-009"
+    },
+    {
+        "dni":  "60580409",
+        "nombre":  "HINOJOSA CAJA, Erikh Albert",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-010"
+    },
+    {
+        "dni":  "72540926",
+        "nombre":  "HOSPINA CABRERA, Eduardo Fabricio",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-011"
+    },
+    {
+        "dni":  "71774372",
+        "nombre":  "HUAMAN ÑAUPA, Miller Alex",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-012"
+    },
+    {
+        "dni":  "75535862",
+        "nombre":  "JAIME YLLESCA, Alejandra Sofía",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-013"
+    },
+    {
+        "dni":  "46050015",
+        "nombre":  "MANRIQUE CARLOS, Carlos Steve",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-014"
+    },
+    {
+        "dni":  "74485298",
+        "nombre":  "NIETO PARRAGA, Crishian Enrique",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-015"
+    },
+    {
+        "dni":  "63326019",
+        "nombre":  "OLIVARES PASTRANA, Jeferson Joseph",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-016"
+    },
+    {
+        "dni":  "61402716",
+        "nombre":  "PORRAS CALDERON, Jamiled Adriana",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-017"
+    },
+    {
+        "dni":  "60708409",
+        "nombre":  "RAMIREZ MURGA, Darwin Bush",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-018"
+    },
+    {
+        "dni":  "63201365",
+        "nombre":  "RAMON BRICEÑO, Joseph Smith",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-019"
+    },
+    {
+        "dni":  "60906205",
+        "nombre":  "RIVERA YUCRA, Israel Joel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-020"
+    },
+    {
+        "dni":  "61375511",
+        "nombre":  "ROQUE QUIÑONES, Jhans Keith",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-021"
+    },
+    {
+        "dni":  "61061696",
+        "nombre":  "SANTOS SANABRIA, Sally Pamela",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-022"
+    },
+    {
+        "dni":  "61290016",
+        "nombre":  "TELLO BENITO, Christian Anthony",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-023"
+    },
+    {
+        "dni":  "60982270",
+        "nombre":  "TICLLACURI IGNACIO, Tatiana Carla",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-024"
+    },
+    {
+        "dni":  "71474263",
+        "nombre":  "ARANA VASQUEZ, Miguel Angel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-025"
+    },
+    {
+        "dni":  "60264563",
+        "nombre":  "ASORZA PEÑALOZA, Mexquias",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-026"
+    },
+    {
+        "dni":  "73339787",
+        "nombre":  "CARDENAS DAVILA, Sebastian Diego",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-027"
+    },
+    {
+        "dni":  "75802616",
+        "nombre":  "CASTILLO LEON, Daimon Jeisel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-028"
+    },
+    {
+        "dni":  "74476771",
+        "nombre":  "CHANCA VARGAS, Kenyo Junior",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-029"
+    },
+    {
+        "dni":  "61206630",
+        "nombre":  "CHIHUAN MARQUEZ, Joseph Daniel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-030"
+    },
+    {
+        "dni":  "71586559",
+        "nombre":  "CONTRERAS BULLON, Daniel Arnaldo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-031"
+    },
+    {
+        "dni":  "71811067",
+        "nombre":  "CUSIPUMA SANCHEZ, Smith Aldair",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-032"
+    },
+    {
+        "dni":  "74588539",
+        "nombre":  "GÓMEZ RIOS, Libertad Sayra",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-033"
+    },
+    {
+        "dni":  "75287034",
+        "nombre":  "HUAMAN DURAND, Luis Mario",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-034"
+    },
+    {
+        "dni":  "61311997",
+        "nombre":  "HUAROC MANRIQUE, Richffyr Jhonny",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-035"
+    },
+    {
+        "dni":  "73947035",
+        "nombre":  "PALOMINO CAPCHA, Yhosily",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-036"
+    },
+    {
+        "dni":  "60544360",
+        "nombre":  "PAUCAR MOLLEHUARA, Jesús Amadeo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-037"
+    },
+    {
+        "dni":  "60283458",
+        "nombre":  "PEREZ AGUILA, Hasly Milena",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-038"
+    },
+    {
+        "dni":  "45150615",
+        "nombre":  "ALIAGA URIBE, Jonatan Jesus",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-039"
+    },
+    {
+        "dni":  "60751295",
+        "nombre":  "BARTOLO HUAMAN, Mayori Iveth",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-040"
+    },
+    {
+        "dni":  "74895768",
+        "nombre":  "CASTILLO LEON, Dayana Solange",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-041"
+    },
+    {
+        "dni":  "60199161",
+        "nombre":  "CASTILLON DE LA CRUZ, Lucinda",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-042"
+    },
+    {
+        "dni":  "75981891",
+        "nombre":  "DAMAS BUITRON, Karol Mayumi",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-043"
+    },
+    {
+        "dni":  "60006146",
+        "nombre":  "FLORES VILA, Miriam Maryory",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-044"
+    },
+    {
+        "dni":  "73506997",
+        "nombre":  "GUILLEN ORTIZ, Moises Uriel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-045"
+    },
+    {
+        "dni":  "75141758",
+        "nombre":  "INCARROCA JAYO, Aldo Uriel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-046"
+    },
+    {
+        "dni":  "74485664",
+        "nombre":  "MANTARI CAMPOS, Sandra Lorena",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-047"
+    },
+    {
+        "dni":  "76321245",
+        "nombre":  "ORTEGA LOAYZA, Marilu Fiorella",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-048"
+    },
+    {
+        "dni":  "60981968",
+        "nombre":  "PAUCAR RAMOS, Max Jhuñor",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-049"
+    },
+    {
+        "dni":  "60875986",
+        "nombre":  "PINTO LARRAZABAL, Guillermo Faris",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-050"
+    },
+    {
+        "dni":  "71339603",
+        "nombre":  "QUISPE ROJAS, Daniel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-051"
+    },
+    {
+        "dni":  "71498380",
+        "nombre":  "SALAZAR QUINTO, Johana Paulina",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-052"
+    },
+    {
+        "dni":  "70116679",
+        "nombre":  "SERPA QUISPE, Yordy Michael",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-053"
+    },
+    {
+        "dni":  "75416272",
+        "nombre":  "SOLANO VILLANEDA, Angel Martin",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-054"
+    },
+    {
+        "dni":  "77570854",
+        "nombre":  "VILCHEZ MODRAGON, Victor Andres",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-055"
+    },
+    {
+        "dni":  "72744155",
+        "nombre":  "ALVÁREZ CASAS, Julio Cesar",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-056"
+    },
+    {
+        "dni":  "71471176",
+        "nombre":  "ARAUCO ANGELES, Jorge Martin",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-057"
+    },
+    {
+        "dni":  "71974481",
+        "nombre":  "CALDERON OLIVAR, Cristian Omar",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-058"
+    },
+    {
+        "dni":  "74981468",
+        "nombre":  "CARO AVELINO, Carlos Miguel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-059"
+    },
+    {
+        "dni":  "71586559",
+        "nombre":  "CONTRERAS BULLON, Daniel Arnaldo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-060"
+    },
+    {
+        "dni":  "70936762",
+        "nombre":  "GÓMEZ USURIAGA, Mardy Clariza",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-061"
+    },
+    {
+        "dni":  "20044598",
+        "nombre":  "LAZO GALVEZ, Rolando",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-062"
+    },
+    {
+        "dni":  "60933259",
+        "nombre":  "LAZO GÓMEZ, Sofia Adara",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-063"
+    },
+    {
+        "dni":  "61012298",
+        "nombre":  "MACETAS LAZO, Fausto Roberto",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-064"
+    },
+    {
+        "dni":  "72266440",
+        "nombre":  "MUÑOZ ROMERO, Elias Carlos",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-065"
+    },
+    {
+        "dni":  "72203438",
+        "nombre":  "ORE CARHUANCHO, Francis Alessandro",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-066"
+    },
+    {
+        "dni":  "75978652",
+        "nombre":  "ROMERO NAVARRO, Thais Micaela",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-067"
+    },
+    {
+        "dni":  "72554117",
+        "nombre":  "ROSAS VASQUEZ, Reymont Jacob",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-068"
+    },
+    {
+        "dni":  "61599770",
+        "nombre":  "SAYAS INOCENTE, Jeremy",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-069"
+    },
+    {
+        "dni":  "73327513",
+        "nombre":  "TORRES RAFAEL, Leonardo Jesús",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-070"
+    },
+    {
+        "dni":  "62164620",
+        "nombre":  "VELARDE HUAMAN, Yunihor Leonel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-071"
+    },
+    {
+        "dni":  "72937602",
+        "nombre":  "VILCAPOMA HILARIO, Hans Kenny",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-072"
+    },
+    {
+        "dni":  "77690837",
+        "nombre":  "GARCIA SAMANIEGO, Jose Maria",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-073"
+    },
+    {
+        "dni":  "47993765",
+        "nombre":  "HUACHIHUACO HUAMAN, Williams Miguel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-074"
+    },
+    {
+        "dni":  "74355048",
+        "nombre":  "LAURA MORAN, Antony Himmer",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-075"
+    },
+    {
+        "dni":  "74874482",
+        "nombre":  "TINOCO LEON, Maria Pilar",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-076"
+    },
+    {
+        "dni":  "42091347",
+        "nombre":  "TOVAR QUISPE, Rogelio Clever",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-077"
+    },
+    {
+        "dni":  "75986171",
+        "nombre":  "VILA MUÑOZ, Ethiel Maryori",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-078"
+    },
+    {
+        "dni":  "75515598",
+        "nombre":  "AQUINO ANGLAS, Cesar Augusto",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-079"
+    },
+    {
+        "dni":  "71611850",
+        "nombre":  "HINOSTROZA TELLO, Cirilo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-080"
+    },
+    {
+        "dni":  "76749024",
+        "nombre":  "LAIME ESPEJO, Guido Euclides",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-081"
+    },
+    {
+        "dni":  "72537555",
+        "nombre":  "PEÑA ANGELES, Carmen Celeste",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-082"
+    },
+    {
+        "dni":  "73339820",
+        "nombre":  "QUISPE CARHUANCHO, George Patrick",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-083"
+    },
+    {
+        "dni":  "60226936",
+        "nombre":  "TREJO MENDEZ, Enrique",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-084"
+    },
+    {
+        "dni":  "72278379",
+        "nombre":  "MIRANDA RIOS, Nicolas Alberto",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-085"
+    },
+    {
+        "dni":  "45282762",
+        "nombre":  "MIRANDA ARROYO, Jorge Antonio",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-086"
+    },
+    {
+        "dni":  "71895936",
+        "nombre":  "ROMERO GUZMAN, Deysy Nerida",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-087"
+    },
+    {
+        "dni":  "30583471",
+        "nombre":  "PARICAHUA GÓMEZ,  Brenda Patricia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-088"
+    },
+    {
+        "dni":  "44363003",
+        "nombre":  "ORELLANA FLORES, Juan Carlos",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-089"
+    },
+    {
+        "dni":  "20036143",
+        "nombre":  "GÓMEZ GALINDO, Celinda",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-090"
+    },
+    {
+        "dni":  "19847814",
+        "nombre":  "LAZO PIÑAS, Mario",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-091"
+    },
+    {
+        "dni":  "60047455",
+        "nombre":  "HUAMAN FERNANDEZ, Antonio Gregorio",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-092"
+    },
+    {
+        "dni":  "77141834",
+        "nombre":  "DE LA CRUZ JOLLANO, Luz Valeria",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-093"
+    },
+    {
+        "dni":  "71816338",
+        "nombre":  "GONZÁLES JAVIER, Gabriel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-094"
+    },
+    {
+        "dni":  "40428451",
+        "nombre":  "COHAILA BRAVO, Ninoska Nataly",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-095"
+    },
+    {
+        "dni":  "46523534",
+        "nombre":  "ALANOCA PÉREZ, Jhonatan Gabriel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-096"
+    },
+    {
+        "dni":  "43347487",
+        "nombre":  "SALOMÉ CASTRO, Geovanna Yeny",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-097"
+    },
+    {
+        "dni":  "72847534",
+        "nombre":  "NUÑEZ DE LA CRUZ, Kleider Yorddy",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-098"
+    },
+    {
+        "dni":  "42753851",
+        "nombre":  "SAENZ QUINTE, Hugo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-099"
+    },
+    {
+        "dni":  "42428888",
+        "nombre":  "MORAN ESTEBAN Heber Joel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-100"
+    },
+    {
+        "dni":  "71011532",
+        "nombre":  "BARZOLA JACOBIN, Ana Paula",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-101"
+    },
+    {
+        "dni":  "76422777",
+        "nombre":  "HERRERA VALLEJOS, Estiven Daniel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-102"
+    },
+    {
+        "dni":  "19814133",
+        "nombre":  "LLACSAHUANGA TUSE, Helder Teotista",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-103"
+    },
+    {
+        "dni":  "74027742",
+        "nombre":  "TOLENTINO BELITO, Miguel Eduardo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-104"
+    },
+    {
+        "dni":  "42040775",
+        "nombre":  "QUISPE CAMARGO, Percy Javier",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-105"
+    },
+    {
+        "dni":  "41504603",
+        "nombre":  "SURICHAQUI CERVANTES, Jorge Luis",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-106"
+    },
+    {
+        "dni":  "46600161",
+        "nombre":  "ALEGRE VELITO, Lizzett",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-107"
+    },
+    {
+        "dni":  "47080370",
+        "nombre":  "SOLLER ASTO, Jhaquelin",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-108"
+    },
+    {
+        "dni":  "20052743",
+        "nombre":  "VILCAS CENTENO, Jorge Luis",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-109"
+    },
+    {
+        "dni":  "70115294",
+        "nombre":  "ROJAS ALFONSO, Yovani Brian",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-110"
+    },
+    {
+        "dni":  "42318540",
+        "nombre":  "SÁNCHEZ QUISPE, Yuri",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-111"
+    },
+    {
+        "dni":  "77212356",
+        "nombre":  "MEZA YARANGA, Sherlyn Paola",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-112"
+    },
+    {
+        "dni":  "73584980",
+        "nombre":  "PAUCAR CANALES, Thania",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-113"
+    },
+    {
+        "dni":  "70305973",
+        "nombre":  "YURIVILCA OSCANOA, Yessica Cristina",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-114"
+    },
+    {
+        "dni":  "76342904",
+        "nombre":  "HUARI ANTIPA, Jerson Frederick",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-115"
+    },
+    {
+        "dni":  "78109144",
+        "nombre":  "TOVAR MURAYARI, José Luís",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-116"
+    },
+    {
+        "dni":  "19837991",
+        "nombre":  "PAREDES CASTILLO, Ana María",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-117"
+    },
+    {
+        "dni":  "46544034",
+        "nombre":  "LUCEN SOLDEVILLA, Jorge Antonio",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-118"
+    },
+    {
+        "dni":  "21119811",
+        "nombre":  "MICHO RODRIGUEZ, Jorge Luis",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-119"
+    },
+    {
+        "dni":  "20081002",
+        "nombre":  "LAZARTE PARIONA, Flor Rossana",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-120"
+    },
+    {
+        "dni":  "41067651",
+        "nombre":  "VENTOCILLA YAURI, Mauro",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-121"
+    },
+    {
+        "dni":  "71240844",
+        "nombre":  "YÉPEZ GARCIA, Nadia Melissa",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-122"
+    },
+    {
+        "dni":  "21114379",
+        "nombre":  "YURIVILCA TINOCO, Abel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-123"
+    },
+    {
+        "dni":  "19922639",
+        "nombre":  "HUAYNALAYA ROJAS, Carlos Nixon",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-124"
+    },
+    {
+        "dni":  "20117297",
+        "nombre":  "CUBA LOPEZ, Victor Alfredo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-125"
+    },
+    {
+        "dni":  "20115563",
+        "nombre":  "GARCIA BUENDIA, Hovers",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-126"
+    },
+    {
+        "dni":  "40712586",
+        "nombre":  "AYALA GUEVARA, Karen",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-127"
+    },
+    {
+        "dni":  "21527949",
+        "nombre":  "CALLE VILCA, Mónica Alejandra",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-128"
+    },
+    {
+        "dni":  "71837566",
+        "nombre":  "CAPACYACHI ROQUE, Jerson Schiller",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-129"
+    },
+    {
+        "dni":  "21298289",
+        "nombre":  "HILARIO POMA, Percy",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-130"
+    },
+    {
+        "dni":  "46670287",
+        "nombre":  "MARIN ROJAS, Pool Yeison",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-131"
+    },
+    {
+        "dni":  "70120031",
+        "nombre":  "ONCEBAY CARDENAS, Madelyn Maddgye Thalia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-132"
+    },
+    {
+        "dni":  "44706809",
+        "nombre":  "CARHUANCHO HIDALGO, Karen Isabel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-133"
+    },
+    {
+        "dni":  "70175635",
+        "nombre":  "RICALDI CAÑA, David Enrique",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-134"
+    },
+    {
+        "dni":  "21289257",
+        "nombre":  "PORRAS CHAVEZ, Marilú",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-135"
+    },
+    {
+        "dni":  "712226688",
+        "nombre":  "VERA VILLAVICENCIO, Mariela Soledad",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-136"
+    },
+    {
+        "dni":  "73964586",
+        "nombre":  "DURAND INGARUCA, Sammar Nicole",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-137"
+    },
+    {
+        "dni":  "71691989",
+        "nombre":  "CHAVEZ CONDORI, Ericson Elias",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-138"
+    },
+    {
+        "dni":  "73673436",
+        "nombre":  "MIRANDA CASTILLON, Maykol Jhonatan",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-139"
+    },
+    {
+        "dni":  "76411596",
+        "nombre":  "SALVADOR CONDORI, Breenda Dayana",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-140"
+    },
+    {
+        "dni":  "20045498",
+        "nombre":  "LAZO BELTRAN, Nestor Rolando",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-141"
+    },
+    {
+        "dni":  "42668785",
+        "nombre":  "HUAMAN SUAZO, Angela Patricia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-142"
+    },
+    {
+        "dni":  "60475162",
+        "nombre":  "VARGAS DURAN, Celia Roxana",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-143"
+    },
+    {
+        "dni":  "40548845",
+        "nombre":  "FERNÁNDEZ PALOMINO, Achishka Huayta",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-144"
+    },
+    {
+        "dni":  "20029563",
+        "nombre":  "CÁRDENAS MORALES, Nancy Berenesi",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-145"
+    },
+    {
+        "dni":  "73995726",
+        "nombre":  "CASTRO GÁLVEZ, Roberto Carlos",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-146"
+    },
+    {
+        "dni":  "45138675",
+        "nombre":  "NINAVILCA CALDERÓN, Julia Jovana",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-147"
+    },
+    {
+        "dni":  "71308960",
+        "nombre":  "CÓNDOR SALCEDO, Susan Hortencia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-148"
+    },
+    {
+        "dni":  "71347022",
+        "nombre":  "SULLCA PADILLA, Silvestre",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-149"
+    },
+    {
+        "dni":  "19859361",
+        "nombre":  "ESTEBAN RUIZ, Efrain",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-150"
+    },
+    {
+        "dni":  "46431307",
+        "nombre":  "MARTINEZ CALDERON, Sonia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-151"
+    },
+    {
+        "dni":  "74062412",
+        "nombre":  "TELLO ENRIQUEZ, Angel Rusbel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-152"
+    },
+    {
+        "dni":  "21271786",
+        "nombre":  "CASAS DÁVILA Isabel Enma",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-153"
+    },
+    {
+        "dni":  "76303887",
+        "nombre":  "ANGELES DURAND Claudia Carolina",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-154"
+    },
+    {
+        "dni":  "73040432",
+        "nombre":  "PALLARCO CONDOR Marilyz",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-155"
+    },
+    {
+        "dni":  "47926920",
+        "nombre":  "ESTRADA SOTO, Rocío Cynthia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-156"
+    },
+    {
+        "dni":  "41883713",
+        "nombre":  "BALBIN PAUCAR, Juber",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-157"
+    },
+    {
+        "dni":  "47715034",
+        "nombre":  "MALLMA NAVARRO, Jeffrey Eduardo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-158"
+    },
+    {
+        "dni":  "44720090",
+        "nombre":  "CARVO BARRIOS, Juanita Lauretti",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-159"
+    },
+    {
+        "dni":  "40683948",
+        "nombre":  "CARVO NEYRA, Aracely",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-160"
+    },
+    {
+        "dni":  "72422330",
+        "nombre":  "LAURENTE ZAMBRANO Jean Pierre Patrick",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-161"
+    },
+    {
+        "dni":  "70232784",
+        "nombre":  "DIONISIO SALDAÑA, Zurit Mónica",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-162"
+    },
+    {
+        "dni":  "72004463",
+        "nombre":  "ALANIA CÓRDOVA, Martha Sara",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-163"
+    },
+    {
+        "dni":  "44833843",
+        "nombre":  "RICSE MARAVI, Erika Flora",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-164"
+    },
+    {
+        "dni":  "71249180",
+        "nombre":  "VILLANUEVA DAVILA, Escot Manuel",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-165"
+    },
+    {
+        "dni":  "46813815",
+        "nombre":  "MARAVI CAJA, Regol Marcos",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-166"
+    },
+    {
+        "dni":  "20683589",
+        "nombre":  "MUCHA RAFAEL, Gina",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-167"
+    },
+    {
+        "dni":  "46162083",
+        "nombre":  "ROJAS HILARIO, Cinthia Karen",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-168"
+    },
+    {
+        "dni":  "47201138",
+        "nombre":  "GRADOS NAVARRO, Michael Harol",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-169"
+    },
+    {
+        "dni":  "20112722",
+        "nombre":  "MALLMA TORRES, Ana",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-170"
+    },
+    {
+        "dni":  "60106027",
+        "nombre":  "ROBLES ROBERTO, Liz Quiele",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-171"
+    },
+    {
+        "dni":  "71248050",
+        "nombre":  "FELIX AQUINO, Yulisa",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-172"
+    },
+    {
+        "dni":  "23640523",
+        "nombre":  "JAIME MORALES, Alejandro",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-173"
+    },
+    {
+        "dni":  "20084991",
+        "nombre":  "JAIME MORALES, Pompeyo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-174"
+    },
+    {
+        "dni":  "42379772",
+        "nombre":  "PAUCAR CASAS, Victoria Clelia",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-175"
+    },
+    {
+        "dni":  "75933098",
+        "nombre":  "RAMOS CLEMENTE, Jean Pierre",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-176"
+    },
+    {
+        "dni":  "70123910",
+        "nombre":  "BERNAOLA ROMERO, Alina Dominga",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-177"
+    },
+    {
+        "dni":  "61547445",
+        "nombre":  "INGA TAKAY, Karen Anthonela",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-178"
+    },
+    {
+        "dni":  "46618487",
+        "nombre":  "DANIEL MANUEL ABREGU YANCE",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-179"
+    },
+    {
+        "dni":  "77027576",
+        "nombre":  "MEZA SALAZAR, Johann Rafael",
+        "condicion":  "Ponente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-180"
+    },
+    {
+        "dni":  "20052990",
+        "nombre":  "BASTIDAS HUAMÁN, Elvis Robert",
+        "condicion":  "Ponente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-181"
+    },
+    {
+        "dni":  "45877844",
+        "nombre":  "KAMEL GÓMEZ, Luís Gustavo",
+        "condicion":  "Ponente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-182"
+    },
+    {
+        "dni":  "20066636",
+        "nombre":  "HUAMÁN PAUCAR, Hércules Hernán",
+        "condicion":  "Ponente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-183"
+    },
+    {
+        "dni":  "20044598",
+        "nombre":  "LAZO GÁLVEZ, Rolando",
+        "condicion":  "Ponente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-184"
+    },
+    {
+        "dni":  "46875253",
+        "nombre":  "ÑAHUI PANLLO, Kuking",
+        "condicion":  "Ponente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-185"
+    },
+    {
+        "dni":  "19861993",
+        "nombre":  "Dra. María Magdalena Gómez Galindo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-186"
+    },
+    {
+        "dni":  "20694074",
+        "nombre":  "Mtro. Moisés Álvarez Huamán",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-187"
+    },
+    {
+        "dni":  "19943972",
+        "nombre":  "Mtra. Nohemy Esther Carhuancho Hidalgo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-188"
+    },
+    {
+        "dni":  "20642500",
+        "nombre":  "Dr. Juan Jesús Torres Valero",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-189"
+    },
+    {
+        "dni":  "40774287",
+        "nombre":  "Mtro. Roberto Macetas Rodríguez",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-190"
+    },
+    {
+        "dni":  "44921982",
+        "nombre":  "Lic. Yesenia Evelyn Mallma Navarro",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-191"
+    },
+    {
+        "dni":  "43379400",
+        "nombre":  "Mtro. Rubén Antonny Limache Ignacio",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-192"
+    },
+    {
+        "dni":  "20060174",
+        "nombre":  "Ing. Carlos Rubén Romero Loardo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-193"
+    },
+    {
+        "dni":  "43250320",
+        "nombre":  "Ing. Erick Donniex, Moscoso Bravo",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-194"
+    },
+    {
+        "dni":  "19861993",
+        "nombre":  "Dra. María Magdalena Gómez Galindo",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-195"
+    },
+    {
+        "dni":  "20694074",
+        "nombre":  "Mtro. Moisés Álvarez Huamán",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-196"
+    },
+    {
+        "dni":  "19943972",
+        "nombre":  "Mtra. Nohemy Esther Carhuancho Hidalgo",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-197"
+    },
+    {
+        "dni":  "20642500",
+        "nombre":  "Dr. Juan Jesús Torres Valero",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-198"
+    },
+    {
+        "dni":  "40774287",
+        "nombre":  "Mtro. Roberto Macetas Rodríguez",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-199"
+    },
+    {
+        "dni":  "44921982",
+        "nombre":  "Lic. Yesenia Evelyn Mallma Navarro",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-200"
+    },
+    {
+        "dni":  "43379400",
+        "nombre":  "Mtro. Rubén Antonny Limache Ignacio",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-201"
+    },
+    {
+        "dni":  "20060174",
+        "nombre":  "Ing. Carlos Rubén Romero Loardo",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-202"
+    },
+    {
+        "dni":  "43250320",
+        "nombre":  "Ing. Erick Donniex, Moscoso Bravo",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-203"
+    },
+    {
+        "dni":  "19855223",
+        "nombre":  "Mtro. Edgar Paucar Claudio",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-204"
+    },
+    {
+        "dni":  "19855223",
+        "nombre":  "Mtro. Edgar Paucar Claudio",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-205"
+    },
+    {
+        "dni":  "20683180",
+        "nombre":  "Mtra. María Isabel Rafael Rivas",
+        "condicion":  "Organizador",
+        "codigo":  "IDEXSAM-2026-DPW-S1-206"
+    },
+    {
+        "dni":  "20683180",
+        "nombre":  "Mtra. María Isabel Rafael Rivas",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-207"
+    },
+    {
+        "dni":  "19878798",
+        "nombre":  "Elizabeth Tomasa Aguirre Canales",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-208"
+    },
+    {
+        "dni":  "80422642",
+        "nombre":  "Sonia Nelly Sanchez Manrique",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-209"
+    }
 ]
