@@ -1218,13 +1218,13 @@
         "codigo":  "IDEXSAM-2026-DPW-S1-203"
     },
     {
-        "dni":  "19855223",
+        "dni":  "23261163",
         "nombre":  "Mtro. Edgar Paucar Claudio",
         "condicion":  "Organizador",
         "codigo":  "IDEXSAM-2026-DPW-S1-204"
     },
     {
-        "dni":  "19855223",
+        "dni":  "23261163",
         "nombre":  "Mtro. Edgar Paucar Claudio",
         "condicion":  "Asistente",
         "codigo":  "IDEXSAM-2026-DPW-S1-205"
@@ -1252,5 +1252,11 @@
         "nombre":  "Sonia Nelly Sanchez Manrique",
         "condicion":  "Asistente",
         "codigo":  "IDEXSAM-2026-DPW-S1-209"
+    }
+    {
+        "dni":  "18097060",
+        "nombre":  "RODRÍGUEZ MARCELO, José Raúl",
+        "condicion":  "Asistente",
+        "codigo":  "IDEXSAM-2026-DPW-S1-210"
     }
 ]
