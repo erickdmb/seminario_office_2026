@@ -54,9 +54,9 @@
                 <div class="relative">
                     <label for="inputBusqueda" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 text-left">Número de Documento (DNI):</label>
                     <div class="relative rounded-lg shadow-sm">
-                        <input type="number" id="inputBusqueda"
+                        <input type="text" id="inputBusqueda"
                             class="block w-full rounded-xl border border-slate-300 bg-slate-50 px-4 py-3.5 text-slate-900 placeholder-slate-400 focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-200 focus:outline-none transition-all font-medium text-lg tracking-wide [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
-                            placeholder="Ej. 12345678" maxlength="8" inputmode="numeric" pattern="[0-9]*"
+                            placeholder="Ej. 12345678" maxlength="8" inputmode="numeric" pattern="[0-9]*" autocomplete="off"
                             onkeypress="if(event.key === 'Enter') verificarCertificado()">
                     </div>
                     <p id="mensajeError" class="hidden text-xs font-semibold text-rose-600 mt-1.5 flex items-center gap-1">
@@ -93,6 +93,27 @@
 
     <script>
         let certificadosCache = null;
+        let indicePorDni = null;
+
+        function sanitizarDni(valor) {
+            return String(valor || '').replace(/\D/g, '').slice(0, 8);
+        }
+
+        function construirIndice(certificados) {
+            const indice = new Map();
+
+            for (const registro of certificados) {
+                const dni = sanitizarDni(registro.dni);
+                if (!dni) continue;
+
+                if (!indice.has(dni)) {
+                    indice.set(dni, []);
+                }
+                indice.get(dni).push(registro);
+            }
+
+            return indice;
+        }
 
         // Cargar padrón al inicio para mostrar total de registros
         async function cargarPadron() {
@@ -100,6 +121,7 @@
                 const respuesta = await fetch('certificados.json');
                 if (respuesta.ok) {
                     certificadosCache = await respuesta.json();
+                    indicePorDni = construirIndice(certificadosCache);
                     const total = certificadosCache.length;
                     document.getElementById('totalRegistros').textContent =
                         `${total} ${total === 1 ? 'registro certificado' : 'registros certificados'}`;
@@ -119,10 +141,12 @@
 
         async function verificarCertificado() {
             const input = document.getElementById('inputBusqueda');
-            const query = input.value.trim();
+            const query = sanitizarDni(input.value);
             const contenedor = document.getElementById('contenedorResultado');
 
             limpiarError();
+
+            input.value = query;
 
             if (!query) {
                 mostrarError('Ingrese el número de DNI del participante.');
@@ -155,13 +179,18 @@
                     const respuesta = await fetch('certificados.json');
                     if (!respuesta.ok) throw new Error('No se pudo acceder al padrón.');
                     certificadosCache = await respuesta.json();
+                    indicePorDni = construirIndice(certificadosCache);
                     baseDatos = certificadosCache;
+                }
+
+                if (!indicePorDni) {
+                    indicePorDni = construirIndice(baseDatos);
                 }
 
                 // Retraso mínimo para que el usuario perciba el estado de carga
                 await new Promise(resolve => setTimeout(resolve, 400));
 
-                const registros = baseDatos.filter(item => String(item.dni).trim() === query);
+                const registros = indicePorDni.get(query) || [];
 
                 if (registros.length > 0) {
                     const tarjetas = registros.map((alumno, index) => `
@@ -370,8 +399,11 @@
             }
         }
 
-        // Limpiar error al escribir
-        document.getElementById('inputBusqueda').addEventListener('input', limpiarError);
+        // Limpiar error y mantener entrada en formato DNI (solo 8 dígitos)
+        document.getElementById('inputBusqueda').addEventListener('input', (event) => {
+            event.target.value = sanitizarDni(event.target.value);
+            limpiarError();
+        });
 
         // Cargar padrón en segundo plano al cargar la página
         cargarPadron();
