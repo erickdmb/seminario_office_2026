@@ -1,0 +1,127 @@
+[
+  {
+    "id": "office-avanzado",
+    "tabLabel": "Office Avanzado",
+    "titulo": "Seminario de Office Avanzado",
+    "edicion": "",
+    "anio": 2026,
+    "badgeColor": "sky",
+    "jsonFile": "data/certificados/certi_office_2026.json",
+    "horas": "120 Horas Académicas",
+    "horasNumericas": 120,
+    "creditos": "4 Créditos",
+    "creditosNumericos": 4,
+    "modalidad": "Virtual — Google Meet y Facebook Live",
+    "activo": true,
+    "temario": [
+      {
+        "area": "Excel",
+        "titulo": "Automatización y análisis de datos en Excel con IA",
+        "ponente": "Johann Rafael Meza Salazar",
+        "color": "sky",
+        "icono": "grafico"
+      },
+      {
+        "area": "Office",
+        "titulo": "Outlook y OneNote: Gestión avanzada de información",
+        "ponente": "Mtro. Elvis Bastidas Huamán",
+        "color": "blue",
+        "icono": "email"
+      },
+      {
+        "area": "PowerPoint",
+        "titulo": "PowerPoint profesional con IA: Storytelling visual",
+        "ponente": "Luis Gustavo Kamel Gómez",
+        "color": "violet",
+        "icono": "presentacion"
+      },
+      {
+        "area": "Excel",
+        "titulo": "Excel para toma de decisiones: Herramientas de simulación",
+        "ponente": "Mtro. Hércules Hernán Huamán Paucar",
+        "color": "emerald",
+        "icono": "barras"
+      },
+      {
+        "area": "Word",
+        "titulo": "Word avanzado: Automatización y documentos profesionales",
+        "ponente": "Mtro. Rolando Lazo Gálvez",
+        "color": "amber",
+        "icono": "documento"
+      },
+      {
+        "area": "Office 365",
+        "titulo": "Integración avanzada en Office 365 Copilot",
+        "ponente": "Mtro. Kuking Ñahui Parillo",
+        "color": "indigo",
+        "icono": "rayo"
+      }
+    ]
+  },
+  {
+    "id": "senatic-vii",
+    "tabLabel": "SENATIC VII",
+    "titulo": "Seminario Nacional en Tecnologías de Información y Comunicaciones",
+    "edicion": "Séptima Edición",
+    "anio": 2026,
+    "badgeColor": "indigo",
+    "jsonFile": "data/certificados/certi_senatic_vii_2026.json",
+    "horas": "120 Horas Académicas",
+    "horasNumericas": 120,
+    "creditos": "4 Créditos",
+    "creditosNumericos": 4,
+    "modalidad": "Virtual — Google Meet y Facebook Live",
+    "activo": true,
+    "temario": [
+      {
+        "area": "Desarrollo de Software",
+        "titulo": "Desarrollo de Software Guiado por pruebas (TDD)",
+        "ponente": "Ing. Andrei Roger Quispe Alderete",
+        "color": "sky",
+        "icono": "codigo"
+      },
+      {
+        "area": "Gestión de Datos",
+        "titulo": "Ética y responsabilidad en la Gestión de Datos",
+        "ponente": "Ing. Ricardo Lazo Gómez",
+        "color": "blue",
+        "icono": "email"
+      },
+      {
+        "area": "UX/UI",
+        "titulo": "Diseño de Experiencia de Usuario (UX)",
+        "ponente": "Rocio Gladys Matos Barzola",
+        "color": "violet",
+        "icono": "presentacion"
+      },
+      {
+        "area": "Cloud Computing",
+        "titulo": "AWS Cloud",
+        "ponente": "Ing. Carlos Eduardo Cortez Bazán",
+        "color": "emerald",
+        "icono": "barras"
+      },
+      {
+        "area": "Gamer",
+        "titulo": "Desarrollo de video juegos interactivos con Unity",
+        "ponente": "Mtra. Ninoska Nataly Cohaila Bravo",
+        "color": "amber",
+        "icono": "documento"
+      },
+      {
+        "area": "Desarrollo de Software",
+        "titulo": "Metodologías de Desarrollo de Software",
+        "ponente": "Ing. Anibal Jhamil Huaman Verastein",
+        "color": "indigo",
+        "icono": "rayo"
+      },
+      {
+        "area": "Ciberseguridad",
+        "titulo": "Ciberseguridad: Amenazas, ataque y defensa digital",
+        "ponente": "Lic. Hernan Quispe Chanco",
+        "color": "indigo",
+        "icono": "seguridad"
+      }
+    ]
+  }
+]
